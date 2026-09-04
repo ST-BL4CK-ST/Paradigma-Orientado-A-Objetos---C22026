@@ -67,18 +67,10 @@ public class Consulta {
         this.requiereSeguimiento = requiereSeguimiento;
     }
 
-    /**
-     * a. La consulta ya guarda directamente si requiere seguimiento; este
-     * método expone esa decisión de forma explícita.
-     */
     public boolean requiereSeguimiento() {
         return requiereSeguimiento;
     }
 
-    /**
-     * b. Calcula el costo final aplicando un descuento (20%) si el paciente
-     * posee obra social.
-     */
     public double calcularCostoFinal(boolean tieneObraSocial) {
         if (tieneObraSocial) {
             return costo * 0.80;
@@ -86,9 +78,6 @@ public class Consulta {
         return costo;
     }
 
-    /**
-     * c. Resumen de la atención realizada.
-     */
     public String mostrarResumen() {
         return String.format("[%s] Motivo: %s | Diagnóstico: %s | Tratamiento: %s | Costo: %.2f | Seguimiento: %s",
                 fechaAtencion, motivo, diagnostico, tratamiento, costo, requiereSeguimiento ? "Sí" : "No");
