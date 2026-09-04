@@ -17,7 +17,6 @@ public class HistoriaClinica {
         return cantidadConsultas;
     }
 
-    // Agregar consulta
     public void agregarConsulta(Consulta consulta) {
 
         if (cantidadConsultas < consultas.length) {
@@ -33,7 +32,6 @@ public class HistoriaClinica {
         }
     }
 
-    // Buscar consultas por fecha
     public void buscarPorFecha(String fecha) {
 
         boolean encontrada = false;
@@ -52,7 +50,6 @@ public class HistoriaClinica {
         }
     }
 
-    // Contar consultas que requieren seguimiento
     public int contarSeguimientos() {
 
         int contador = 0;
@@ -67,7 +64,6 @@ public class HistoriaClinica {
         return contador;
     }
 
-    // Costo promedio
     public double calcularCostoPromedio() {
 
         if (cantidadConsultas == 0) {
@@ -83,7 +79,6 @@ public class HistoriaClinica {
         return suma / cantidadConsultas;
     }
 
-    // Consulta de mayor costo
     public Consulta obtenerConsultaMayorCosto() {
 
         if (cantidadConsultas == 0) {
@@ -102,7 +97,6 @@ public class HistoriaClinica {
         return mayor;
     }
 
-    // Última consulta
     public Consulta obtenerUltimaConsulta() {
 
         if (cantidadConsultas == 0) {
@@ -112,7 +106,6 @@ public class HistoriaClinica {
         return consultas[cantidadConsultas - 1];
     }
 
-    // Contar diagnóstico
     public int contarDiagnostico(String diagnostico) {
 
         int contador = 0;
@@ -127,7 +120,6 @@ public class HistoriaClinica {
         return contador;
     }
 
-    // Costo total
     public double calcularCostoTotal() {
 
         double total = 0;

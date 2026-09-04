@@ -18,7 +18,6 @@ public class Paciente {
         this.anioNacimiento = anioNacimiento;
         this.obraSocial = obraSocial;
 
-        // Se crea automáticamente la historia clínica
         this.historiaClinica = new HistoriaClinica(
                 numeroHistoria,
                 capacidadHistoria,
@@ -33,25 +32,21 @@ public class Paciente {
         return historiaClinica;
     }
 
-    // Consultar edad
     public int consultarEdad(int anioActual) {
 
         return anioActual - anioNacimiento;
     }
 
-    // Registrar consulta
     public void registrarConsulta(Consulta consulta) {
 
         historiaClinica.agregarConsulta(consulta);
     }
 
-    // Costo total
     public double obtenerCostoTotalConsultas() {
 
         return historiaClinica.calcularCostoTotal();
     }
 
-    // Ver si necesita seguimiento
     public boolean necesitaSeguimiento() {
 
         if (historiaClinica.contarSeguimientos() > 0) {

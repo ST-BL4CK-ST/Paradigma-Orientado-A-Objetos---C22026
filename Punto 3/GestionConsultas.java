@@ -1,42 +1,18 @@
 public class GestionConsultas {
 
         public static void main(String[] args) {
-
-                // =================================
-                // PACIENTE
-                // =================================
-
-                Paciente paciente = new Paciente(
-                                1,
-                                "Juan Perez",
-                                "10/05/2000",
-                                2000,
-                                "OSDE",
-                                1001,
-                                3,
-                                "01/09/2026");
+                Paciente paciente = new Paciente(1, "Juan Perez", "10/05/2000", 2000, "OSDE", 1001, 3, "01/09/2026");
 
                 System.out.println("Paciente: " + paciente.getNombreApellido());
 
-                System.out.println("Edad: "
-                                + paciente.consultarEdad(2026));
-
-                // =================================
-                // HISTORIA VACIA
-                // =================================
+                System.out.println("Edad: " + paciente.consultarEdad(2026));
 
                 System.out.println();
                 System.out.println("HISTORIA VACIA");
 
-                System.out.println("Cantidad de consultas: "
-                                + paciente.getHistoriaClinica().getCantidadConsultas());
+                System.out.println("Cantidad de consultas: " + paciente.getHistoriaClinica().getCantidadConsultas());
 
-                System.out.println("Costo promedio: $"
-                                + paciente.getHistoriaClinica().calcularCostoPromedio());
-
-                // =================================
-                // CREAR CONSULTAS
-                // =================================
+                System.out.println("Costo promedio: $" + paciente.getHistoriaClinica().calcularCostoPromedio());
 
                 Consulta consulta1 = new Consulta(
                                 "10/08/2026",
@@ -70,10 +46,6 @@ public class GestionConsultas {
                                 10000,
                                 false);
 
-                // =================================
-                // VARIAS CONSULTAS
-                // =================================
-
                 System.out.println();
                 System.out.println("VARIAS CONSULTAS");
 
@@ -82,33 +54,20 @@ public class GestionConsultas {
 
                 System.out.println();
 
-                System.out.println("Cantidad de consultas: "
-                                + paciente.getHistoriaClinica().getCantidadConsultas());
+                System.out.println("Cantidad de consultas: " + paciente.getHistoriaClinica().getCantidadConsultas());
 
-                System.out.println("Costo total: $"
-                                + paciente.obtenerCostoTotalConsultas());
+                System.out.println("Costo total: $" + paciente.obtenerCostoTotalConsultas());
 
-                System.out.println("Costo promedio: $"
-                                + paciente.getHistoriaClinica().calcularCostoPromedio());
+                System.out.println("Costo promedio: $" + paciente.getHistoriaClinica().calcularCostoPromedio());
 
-                System.out.println("Consultas con seguimiento: "
-                                + paciente.getHistoriaClinica().contarSeguimientos());
+                System.out.println("Consultas con seguimiento: " + paciente.getHistoriaClinica().contarSeguimientos());
 
-                System.out.println("Necesita seguimiento: "
-                                + paciente.necesitaSeguimiento());
-
-                // =================================
-                // BUSCAR POR FECHA
-                // =================================
+                System.out.println("Necesita seguimiento: " + paciente.necesitaSeguimiento());
 
                 System.out.println();
                 System.out.println("BUSCAR CONSULTA POR FECHA");
 
                 paciente.getHistoriaClinica().buscarPorFecha("20/08/2026");
-
-                // =================================
-                // MAYOR COSTO
-                // =================================
 
                 Consulta mayor = paciente.getHistoriaClinica().obtenerConsultaMayorCosto();
 
@@ -120,10 +79,6 @@ public class GestionConsultas {
                         mayor.mostrarResumen();
                 }
 
-                // =================================
-                // ULTIMA CONSULTA
-                // =================================
-
                 Consulta ultima = paciente.getHistoriaClinica().obtenerUltimaConsulta();
 
                 if (ultima != null) {
@@ -134,31 +89,17 @@ public class GestionConsultas {
                         ultima.mostrarResumen();
                 }
 
-                // =================================
-                // CONTAR DIAGNOSTICO
-                // =================================
-
                 System.out.println();
 
                 System.out.println("Cantidad con diagnostico Migrana: "
-                                + paciente.getHistoriaClinica()
-                                                .contarDiagnostico("Migrana"));
-
-                // =================================
-                // COSTO CON OBRA SOCIAL
-                // =================================
+                                + paciente.getHistoriaClinica().contarDiagnostico("Migrana"));
 
                 System.out.println();
 
                 System.out.println("Costo normal: $" + consulta1.getCosto());
 
-                System.out.println("Costo con obra social: $"
-                                + consulta1.calcularCostoFinal(
-                                                paciente.tieneObraSocial()));
-
-                // =================================
-                // HISTORIA COMPLETA
-                // =================================
+                System.out.println(
+                                "Costo con obra social: $" + consulta1.calcularCostoFinal(paciente.tieneObraSocial()));
 
                 System.out.println();
                 System.out.println("HISTORIA COMPLETA");
@@ -169,7 +110,6 @@ public class GestionConsultas {
                 // Esta no debería entrar.
                 paciente.registrarConsulta(consulta4);
 
-                System.out.println("Cantidad final: "
-                                + paciente.getHistoriaClinica().getCantidadConsultas());
+                System.out.println("Cantidad final: " + paciente.getHistoriaClinica().getCantidadConsultas());
         }
 }
