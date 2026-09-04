@@ -7,10 +7,14 @@ public class Paciente {
     private String obraSocial;
     private HistoriaClinica historiaClinica;
 
-    public Paciente(int numeroIdentificacion, String nombreApellido,
-            String fechaNacimiento, int anioNacimiento,
-            String obraSocial, int numeroHistoria,
-            int capacidadHistoria, String fechaCreacion) {
+    public Paciente(int     numeroIdentificacion,
+                    String  nombreApellido,
+                    String  fechaNacimiento,
+                    int     anioNacimiento,
+                    String  obraSocial,
+                    int     numeroHistoria,
+                    int     capacidadHistoria,
+                    String  fechaCreacion) {
 
         this.numeroIdentificacion = numeroIdentificacion;
         this.nombreApellido = nombreApellido;
@@ -21,7 +25,8 @@ public class Paciente {
         this.historiaClinica = new HistoriaClinica(
                 numeroHistoria,
                 capacidadHistoria,
-                fechaCreacion);
+                fechaCreacion
+        );
     }
 
     public String getNombreApellido() {

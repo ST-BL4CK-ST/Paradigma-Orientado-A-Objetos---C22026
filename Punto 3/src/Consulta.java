@@ -7,8 +7,12 @@ public class Consulta {
     private double costo;
     private boolean seguimiento;
 
-    public Consulta(String fechaAtencion, String motivo, String diagnostico,
-            String tratamiento, double costo, boolean seguimiento) {
+    public Consulta(String  fechaAtencion,
+                    String  motivo,
+                    String  diagnostico,
+                    String  tratamiento,
+                    double  costo,
+                    boolean seguimiento) {
 
         this.fechaAtencion = fechaAtencion;
         this.motivo = motivo;
