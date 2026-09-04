@@ -2,7 +2,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Crear paciente
         Paciente paciente1 = new Paciente(
                 1,
                 "Juan Perez",
